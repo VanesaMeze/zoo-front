@@ -10,7 +10,7 @@ const AnimalRow = ({ animals }) => {
       </div>
       <br />
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {animals.map((animal, id) => (
+        {animals?.map((animal, id) => (
           <div
             key={id}
             className="text-center col m-5"

@@ -1,4 +1,3 @@
-// import { useContext } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Register from "./register/Register";

@@ -9,8 +9,10 @@ const Animals = () => {
   const { animals, updateAnimal } = useContext(AnimalContext);
 
   useEffect(() => {
+    document.querySelector(".nav").classList.add("affix");
     getAnimals(currentPage).then(({ data }) => {
-      updateAnimal(data);
+      // console.log(data);
+      updateAnimal(data.data);
       setLastPage(data.last_page);
     });
   }, [currentPage]);
@@ -22,7 +24,7 @@ const Animals = () => {
   };
 
   const goToNextPage = () => {
-    console.log(lastPage);
+    // console.log(lastPage);
     if (currentPage < lastPage) {
       setCurrentPage(currentPage + 1);
     }
@@ -40,7 +42,7 @@ const Animals = () => {
           <ul className="pagination">
             <li className="page-item">
               <button
-                className="btn btn-outline-light"
+                className="btn button1"
                 onClick={goToPreviousPage}
                 disabled={currentPage === 1}
               >
@@ -48,11 +50,11 @@ const Animals = () => {
               </button>
             </li>
             <li className="page-item">
-              <span className="btn btn-outline-light">Page {currentPage}</span>
+              <span className="btn button1">Page {currentPage}</span>
             </li>
             <li className="page-item">
               <button
-                className="btn btn-outline-light"
+                className="btn button1"
                 onClick={goToNextPage}
                 disabled={currentPage === lastPage}
               >
