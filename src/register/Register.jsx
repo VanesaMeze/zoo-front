@@ -79,7 +79,7 @@ const Register = () => {
           />
           <label htmlFor="floatingPassword">Password</label>
         </div>
-        <button className="btn btn-outline-dark w-100 py-2" type="submit">
+        <button className="btn button1 w-100 py-2" type="submit">
           Confirm
         </button>
       </form>

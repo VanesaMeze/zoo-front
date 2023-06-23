@@ -121,7 +121,7 @@ p {
 
 .button1 {
   background-color: none;
-  color: rgba(170, 155, 130, 0.866);
+  color: rgb(141, 132, 116);
   border: 2px solid rgba(141, 132, 116, 0.651);
   border-radius: 5px;
 }
